@@ -18,18 +18,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} bg-black text-white`}>
-        <ClerkProvider>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={`${inter.className} bg-black text-white`}>
           <div className="flex min-h-screen">
             <Sidebar />
-            <main className="flex-1 ml-[260px]" style={{ overscrollBehaviorX: "auto" }}>
+            <main className="flex-1 ml-[260px]">
               <TopBar />
               {children}
             </main>
           </div>
-        </ClerkProvider>
-      </body>
-    </html>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
