@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 interface BookCardProps {
   title: string;
   author: string;
@@ -13,10 +15,12 @@ export default function BookCard({ title, author, description, coverImage, isEna
     <div className="group">
       <div className="aspect-[2/3] relative overflow-hidden rounded-xl mb-3">
         {coverImage ? (
-          <img 
+          <Image 
             src={coverImage} 
             alt={`${title} cover`}
-            className="object-cover w-full h-full"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         ) : (
           <div className="w-full h-full bg-neutral-900 border border-neutral-800 group-hover:border-neutral-700 transition-colors flex items-center justify-center p-4">

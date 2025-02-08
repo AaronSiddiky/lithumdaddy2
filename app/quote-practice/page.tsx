@@ -86,7 +86,7 @@ export default function QuotePractice() {
         <div className="space-y-6">
           <div className="bg-neutral-900 p-6 rounded-lg">
             <blockquote className="text-lg italic mb-6">
-              "{currentQuote}"
+              &ldquo;{currentQuote}&rdquo;
             </blockquote>
             
             <div className="space-y-4">
