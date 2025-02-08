@@ -1,8 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['your-image-domain.com'], // Add domains where your book covers are hosted
-    unoptimized: process.env.NODE_ENV !== 'production',
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
+    unoptimized: true,
   },
   typescript: {
     ignoreBuildErrors: true,

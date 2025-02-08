@@ -1,3 +1,4 @@
+import ErrorBoundary from '../../components/ErrorBoundary';
 import BookCard from "../../components/BookCard";
 
 const books = [
@@ -5,7 +6,7 @@ const books = [
     title: "Inferno",
     author: "Dante Alighieri",
     description: "First part of the Divine Comedy, following Dante's journey through Hell.",
-    coverImage: "/covers/inferno.jpg",
+    coverImage: "https://example.com/inferno.jpg",
     isEnabled: true
   },
   {
@@ -55,19 +56,17 @@ const books = [
 export default function Books() {
   return (
     <div className="p-8">
-      <h1 className="text-2xl font-bold mb-6">Books</h1>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-        {books.map((book) => (
-          <BookCard
-            key={`${book.author}-${book.title}`}
-            title={book.title}
-            author={book.author}
-            description={book.description}
-            coverImage={book.coverImage}
-            isEnabled={book.isEnabled}
-          />
-        ))}
-      </div>
+      <h1 className="text-2xl font-bold mb-8">Books</h1>
+      <ErrorBoundary>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {books.map((book) => (
+            <BookCard
+              key={book.title}
+              {...book}
+            />
+          ))}
+        </div>
+      </ErrorBoundary>
     </div>
   );
 } 

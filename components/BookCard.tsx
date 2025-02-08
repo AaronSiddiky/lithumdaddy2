@@ -15,13 +15,16 @@ export default function BookCard({ title, author, description, coverImage, isEna
     <div className="group">
       <div className="aspect-[2/3] relative overflow-hidden rounded-xl mb-3">
         {coverImage ? (
-          <Image 
-            src={coverImage} 
-            alt={`${title} cover`}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
+          <div className="relative w-full h-full">
+            <Image 
+              src={coverImage} 
+              alt={`${title} cover`}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              priority
+            />
+          </div>
         ) : (
           <div className="w-full h-full bg-neutral-900 border border-neutral-800 group-hover:border-neutral-700 transition-colors flex items-center justify-center p-4">
             <div className="text-center">
