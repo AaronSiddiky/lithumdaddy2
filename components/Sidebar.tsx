@@ -3,8 +3,8 @@ import Link from "next/link";
 export default function Sidebar() {
   const navLinks = [
     { href: "/books", label: "Books" },
-    { href: "/final-prep", label: "Final Prep" },
     { href: "/quote-practice", label: "Quote ID Practice" },
+    { href: "/final-prep", label: "Final Prep" },
     { href: "/request-feature", label: "Request a Feature" }
   ];
 
