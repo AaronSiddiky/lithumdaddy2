@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider publishableKey="pk_test_c3BsZW5kaWQtYmx1ZWJpcmQtODIuY2xlcmsuYWNjb3VudHMuZGV2JA">
       <html lang="en">
         <body className={`${inter.className} bg-black text-white`}>
           <div className="flex min-h-screen">

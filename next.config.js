@@ -7,6 +7,7 @@ const nextConfig = {
         hostname: '**',
       },
     ],
+    domains: ['images.example.com'],
     unoptimized: true,
   },
   typescript: {
