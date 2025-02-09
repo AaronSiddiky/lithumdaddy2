@@ -69,13 +69,16 @@ export default function ChatInterface({ bookTitle }: ChatInterfaceProps) {
       let response;
 
       if (bookTitle === "The Translator of Desires: Poems") {
-        response = await fetch("http://localhost:5001/ask", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            question: input,
-          }),
-        });
+        response = await fetch(
+          "https://ibnarabi-4c3fb86a4ffb.herokuapp.com/ask",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              question: input,
+            }),
+          }
+        );
 
         if (!response.ok) throw new Error("Failed to get response");
 
