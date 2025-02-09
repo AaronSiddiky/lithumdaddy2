@@ -1,16 +1,11 @@
-import { clerkMiddleware } from "@clerk/nextjs/server";
+import { authMiddleware } from "@clerk/nextjs";
 
 // This example protects all routes including api/trpc routes
 // Please edit this to allow other routes to be public as needed.
 // See https://clerk.com/docs/references/nextjs/auth-middleware for more information about configuring your middleware
-export default clerkMiddleware({
-  publicRoutes: ["/", "/books", "/pricing", "/sign-in", "/sign-up"],
-  ignoredRoutes: [
-    "/((?!api|trpc))(_next|.+\\..+)(.+)",
-    "/api/webhook",
-    "/_next",
-    "/favicon.ico",
-  ],
+export default authMiddleware({
+  publicRoutes: ["/", "/books", "/pricing"],
+  debug: true // Add this to see more detailed errors
 });
 
 export const config = {
