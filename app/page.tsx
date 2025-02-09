@@ -1,10 +1,6 @@
-import SearchSection from "../components/SearchSection";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <main className="p-8">
-      <SearchSection />
-    </main>
-  );
+  redirect("/books");
 }
 //
