@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "../components/Sidebar";
 import TopBar from "../components/TopBar";
-import { ClerkProvider } from '@clerk/nextjs';
+import { ClerkProvider } from "@clerk/nextjs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +16,7 @@ export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
+  //
 }) {
   return (
     <ClerkProvider publishableKey="pk_test_c3BsZW5kaWQtYmx1ZWJpcmQtODIuY2xlcmsuYWNjb3VudHMuZGV2JA">
