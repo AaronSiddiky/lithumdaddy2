@@ -17,9 +17,13 @@ interface Message {
 
 interface ChatInterfaceProps {
   bookTitle: string;
+  userId: string | null;
 }
 
-export default function ChatInterface({ bookTitle }: ChatInterfaceProps) {
+export default function ChatInterface({
+  bookTitle,
+  userId,
+}: ChatInterfaceProps) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
