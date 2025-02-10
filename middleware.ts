@@ -10,7 +10,7 @@ export default authMiddleware({
     "/books",
     "/pricing",
     "/api/create-checkout-session",
-    "books/6",
+    "/books/6",
   ],
 });
 
