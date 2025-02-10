@@ -1,6 +1,4 @@
-"use client";
-
-import { availableBooks } from "../quote-practice/page";
+import { books } from "../../lib/books";
 import BookCard from "../../components/BookCard";
 
 export default function Books() {
@@ -8,7 +6,7 @@ export default function Books() {
     <div className="p-8 max-w-4xl mx-auto">
       <h1 className="text-2xl font-bold mb-6">Available Books</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {availableBooks.map((book) => (
+        {books.map((book) => (
           <div key={book.id}>
             <BookCard
               title={book.title}
