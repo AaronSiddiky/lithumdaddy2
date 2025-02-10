@@ -9,6 +9,15 @@ export interface Book {
 
 export const books: Book[] = [
   {
+    id: "6",
+    title: "The Translator of Desires: Poems",
+    author: "Ibn Arabi",
+    isSelected: false,
+    coverImage: "/covers/ibnarabi.jpg",
+    description:
+      "A masterpiece of Sufi love poetry, exploring the depths of divine and human love through mystical verses that have influenced spiritual seekers for centuries.",
+  },
+  {
     id: "1",
     title: "Inferno",
     author: "Dante Alighieri",
@@ -52,14 +61,5 @@ export const books: Book[] = [
     coverImage: "/covers/lighthouse.jpg",
     description:
       "A modernist novel exploring time, perception, and the nature of art.",
-  },
-  {
-    id: "6",
-    title: "The Translator of Desires: Poems",
-    author: "Ibn Arabi",
-    isSelected: false,
-    coverImage: "/covers/IbnArabi.jpg",
-    description:
-      "A masterpiece of Sufi love poetry, exploring the depths of divine and human love through mystical verses that have influenced spiritual seekers for centuries.",
   },
 ];
