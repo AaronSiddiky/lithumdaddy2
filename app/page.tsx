@@ -1,8 +1,10 @@
-import { books } from "@/lib/books";
-import Image from "next/image";
-import Link from "next/link";
+import { BookGuessingGame } from "@/components/BookGuessingGame";
 
 export default function Home() {
-  return <h1>Purge Complete</h1>;
+  return (
+    <main className="min-h-screen p-8 max-w-2xl mx-auto">
+      <h1 className="text-3xl font-bold mb-8 text-center">Guess the Book!</h1>
+      <BookGuessingGame />
+    </main>
+  );
 }
-//
